@@ -148,16 +148,44 @@
           });
       }
       </script>
-    </body>
-     <article>
-      <h1> 소켓 메시지 </h1>
-      <input type="text" id="text-view" />
-      <input type="button" id="send-button" value="Send!"  />
-      <input type="button" id="stop-button" value="Stop" />
-      <br />
+      <!--#######################################소켓 텍스트 메시지 전달.##############################################-->
+      <article>
+          <h1> 소켓 메시지 </h1>
+          <input type="text" id="text-view" />
+          <input type="button" id="send-button" value="Send!"  />
+          <input type="button" id="stop-button" value="Stop" />
+          <br />
       <label id="status-label">상태</label>
-    </article>
+        </article>
+      <!--#######################################소켓 텍스트 메시지 전달 끝##############################################-->
+        
+        
+        <div id="disqus_thread"></div>
+<script>
+    <!--#######################################댓글기능##############################################-->
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cloud-nine-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!--#######################################댓글기능 끝##############################################-->               
+        
+    </body>
+     
       <!-- ################################################################################################ -->
+      
     </div>
     <!-- ################################################################################################ -->
     <!-- / main body -->
