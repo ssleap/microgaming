@@ -8,9 +8,10 @@ window.onload = function () {
     var buttonSend = document.getElementById("send-button");
     var buttonStop = document.getElementById("stop-button");
     var label = document.getElementById("status-label");
+    var chatArea = document.getElementById("chat-area");
 
     // Connect to the WebSocket server!
-    var socket = new WebSocket("ws://echo.websocket.org");
+    var socket = new WebSocket("ws://localhost:7777");
 
     /**
     * WebSocket onopen event.
@@ -25,7 +26,10 @@ window.onload = function () {
     socket.onmessage = function (event) {
         if (typeof event.data === "string") {
             // Display message.
-            label.innerHTML = label.innerHTML + "<br />" + event.data;
+            chatArea.innerHTML = chatArea.innerHTML + "<p>" + event.data + "</p>";
+
+            // Scroll to bottom.
+            chatArea.scrollTop = chatArea.scrollHeight;
         }
     }
 
@@ -66,7 +70,22 @@ window.onload = function () {
     */
     buttonSend.onclick = function (event) {
         if (socket.readyState == WebSocket.OPEN) {
-            socket.send(textView.value);
+            
+                socket.send(textView.value);
+                textView.value = "";
+        }
+        
+    }
+
+    /**
+    * Send the message and empty the text field.
+    */
+    textView.onkeypress = function (event) {
+        if (event.keyCode == 13) {
+            if (socket.readyState == WebSocket.OPEN) {
+                socket.send(textView.value);
+                textView.value = "";
+            }
         }
     }
 }
