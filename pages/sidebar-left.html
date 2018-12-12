@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>T9SS | Games</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="../index.html">Team 9 Streaming Service</a></h1>
+    </div>
+    <div id="quickinfo" class="fl_right">
+      <ul class="nospace inline">
+        <li><strong>서울시립대</strong><br>
+          컴퓨터과학종합설계</li>
+        <li><strong>9조</strong><br>
+          게임 스트리밍 서비스</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li class="active"><a href="../index.html">Home</a></li>
+      <li><a class="drop" href="sidebar-left.html">Games</a>
+        <ul>
+          <li><a href="sidebar-left.html">Battle Ground</a></li>
+          <li><a href="sidebar-left.html">GTA</a></li>
+          <li><a href="sidebar-left.html">그 외</a></li>
+          <li><a href="sidebar-left.html">여러</a></li>
+          <li><a href="sidebar-left.html">게임들</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Games</h6>
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Games</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sidebar one_quarter first"> 
+      <!-- ################################################################################################ -->
+      <h6>Games</h6>
+      <nav class="sdb_holder">
+        <ul>
+          <li><a href="#">Guide</a></li>
+          <li><a href="#">Battle Ground</a>
+            <ul>
+              <li><a href="#">Streaming service</a></li>
+              <li><a href="#">Play game</a></li>
+            </ul>
+          </li>
+          <li><a href="#">GTA</a>
+            <ul>
+              <li><a href="#">Streaming service</a></li>
+              <li><a href="#">Play game</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">etc</a></li>
+        </ul>
+      </nav>
+      <div class="sdb_holder">
+        <article>
+          <h6>Play your world!</h6>
+          <p>WOOOOW</p>
+        </article>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter"> 
+      <!-- ################################################################################################ -->
+      <h1>Games | Guide</h1>
+      <p> temporary live streaming page</p>
+      <body>
+      <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      <video id="video" width="640" height="480" controls></video>
+      <script>
+      if(Hls.isSupported())
+      {
+          var video = document.getElementById('video');
+          var hls = new Hls();
+          hls.loadSource('https://acee2b4c336e2e6f.mediapackage.ap-northeast-2.amazonaws.com/out/v1/9a998cbe671f40eca5afe7246f1f9db8/index.m3u8');
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED,function()
+          {
+              video.play();
+          });
+      }
+      else if (video.canPlayType('application/vnd.apple.mpegurl'))
+      {
+          video.src = 'https://acee2b4c336e2e6f.mediapackage.ap-northeast-2.amazonaws.com/out/v1/9a998cbe671f40eca5afe7246f1f9db8/index.m3u8';
+          video.addEventListener('canplay',function()
+          {
+              video.play();
+          });
+      }
+      </script>
+    </body>
+      <div id="comments">
+        <h2>Comments</h2>
+        <ul>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
+                <address>
+                By <a href="#">채철민</a>
+                </address>
+                <time datetime="2018-12-06T08:15+00:00">Friday, 6<sup>th</sup> December 2018 08:15:00</time>
+              </header>
+              <div class="comcont">
+                <p>꿀잼~!</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="../images/demo/avatar.png" alt=""></figure>
+                <address>
+                By <a href="#">김영탄</a>
+                </address>
+                <time datetime="2018-12-06T08:15+00:00">Friday, 6<sup>th</sup> December 2018 08:15:00</time>
+              </header>
+              <div class="comcont">
+                <p>굉장히 재미있습니다!</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <h2>Write A Comment</h2>
+        <form action="#" method="post">
+          <div class="one_third first">
+            <label for="name">Name <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="22" required>
+          </div>
+          <div class="one_third">
+            <label for="email">Mail <span>*</span></label>
+            <input type="email" name="email" id="email" value="" size="22" required>
+          </div>
+          <div class="one_third">
+            <label for="url">Website</label>
+            <input type="url" name="url" id="url" value="" size="22">
+          </div>
+          <div class="block clear">
+            <label for="comment">Your Comment</label>
+            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Submit Form">
+            &nbsp;
+            <input type="reset" name="reset" value="Reset Form">
+          </div>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4 bgded overlay" style="background-image:url('../images/demo/backgrounds/04.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">Potenti phasellus</h6>
+      <p>Nunc phasellus nec sem ac ligula elementum cursus fusce in augue blandit ligula pharetra.</p>
+      <p>Mattis aliquam erat volutpat vestibulum porta aliquam erat volutpat mauris at tellus at sapien elementum luctus.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Consequat suspendisse</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Disclaimer</a></li>
+        </ul>
+      </nav>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Vestibulum hendrerit</h6>
+      <article>
+        <h2 class="nospace font-x1"><a href="#">Quisque id vestibulum</a></h2>
+        <time class="font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+        <p>Morbi nibh leo laoreet ac auctor blandit aliquam sed sem nullam lacinia purus eget posuere tristique sapien neque blandit nisl eget ultrices [&hellip;]</p>
+      </article>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Enim diam praesent</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Vehicula auctor nisi sed lacinia</a></li>
+        <li><a href="#">Nunc et porta porta tellus</a></li>
+        <li><a href="#">Sem eget pharetra ligula purus</a></li>
+        <li><a href="#">Amet dui aenean felis pretium</a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
