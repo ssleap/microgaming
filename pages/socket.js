@@ -10,7 +10,7 @@ window.onload = function () {
     var label = document.getElementById("status-label");
 
     // Connect to the WebSocket server!
-    var socket = new WebSocket("ws://echo.websocket.org");
+    var socket = new WebSocket("https://ssleap.github.io/blockchainVR/pages/sidebar-left.html");
 
     /**
     * WebSocket onopen event.
