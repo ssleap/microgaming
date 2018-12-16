@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JRemoteViewer</name>
+    </assembly>
+    <members>
+        <member name="M:JRemoteClient.ReceivMessage.RecvCaptureSize(System.Net.Sockets.Socket)">
+            <summary>
+            수신 캡쳐이미지 사이즈
+            </summary>
+            <param name="aSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JRemoteClient.ReceivMessage.RecvFromServer">
+            <summary>
+            서버측 데이터 수신
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.ReceivMessage.InitRecvMessage(System.Net.Sockets.Socket,System.Windows.Forms.PictureBox)">
+            <summary>
+            수신메세지 초기화
+            </summary>
+            <param name="aSocket">수신소켓</param>
+            <param name="aPictureBox">picture박스</param>
+        </member>
+        <member name="F:JRemoteClient.JRemoteViewer.components">
+            <summary> 
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.Dispose(System.Boolean)">
+            <summary> 
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.InitializeComponent">
+            <summary> 
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.#ctor(System.String,System.String)">
+            <summary>
+            생성자
+            </summary>
+            <param name="aIPAddress">서버주소</param>
+            <param name="aPort">서버포트</param>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.Connect">
+            <summary>
+            서버에 접속
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.JRemoteViewer.DisConnect">
+            <summary>
+            서버접속 해제
+            </summary>
+        </member>
+        <member name="E:JRemoteClient.JRemoteViewer.JRemoteClientClosed">
+            <summary>
+            서버 중지 이벤트
+            </summary>
+        </member>
+        <member name="E:JRemoteClient.JRemoteViewer.JRemoteClientOpen">
+            <summary>
+            서버 시작 이벤트
+            </summary>
+        </member>
+        <member name="P:JRemoteClient.JRemoteViewer.SetConnectionString">
+            <summary>
+            접속 할 아이피주소 및 도메인주소 설정
+            </summary>
+        </member>
+        <member name="P:JRemoteClient.JRemoteViewer.IsDomain">
+            <summary>
+            서버연결 방식 도메인이면 true 설정
+            </summary>
+        </member>
+        <member name="P:JRemoteClient.JRemoteViewer.SetPort">
+            <summary>
+            포트 설정
+            </summary>
+        </member>
+        <member name="P:JRemoteClient.JRemoteViewer.IsConnected">
+            <summary>
+            서버 연결 유무
+            </summary>
+        </member>
+        <member name="M:JRemoteClient.SendMessage.#ctor">
+            <summary>
+            윈도우 메세지
+            </summary>
+        </member>
+        <member name="E:JRemoteClient.SendMessage.fClientClosed">
+            <summary>
+            서버와 접속 닫힘 이벤트
+            </summary>
+        </member>
+        <member name="E:JRemoteClient.SendMessage.fClientOpen">
+            <summary>
+            서버와 접속됨 이벤트
+            </summary>
+        </member>
+        <member name="P:JRemoteClient.SendMessage.Running">
+            <summary>
+            서버 윈격 여부
+            </summary>
+        </member>
+    </members>
+</doc>

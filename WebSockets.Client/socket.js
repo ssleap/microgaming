@@ -17,7 +17,7 @@ window.onload = function () {
     * WebSocket onopen event.
     */
     socket.onopen = function (event) {
-        label.innerHTML = "Connection open";
+        label.innerHTML = "연결되었습니다.";
     }
 
     /**
@@ -42,10 +42,10 @@ window.onload = function () {
         var wasClean = event.wasClean;
 
         if (wasClean) {
-            label.innerHTML = "Connection closed normally.";
+            label.innerHTML = "연결이 종료 되었습니다..";
         }
         else {
-            label.innerHTML = "Connection closed with message: " + reason + " (Code: " + code + ")";
+            label.innerHTML = "Error : " + reason + " (Code: " + code + ")";
         }
     }
 

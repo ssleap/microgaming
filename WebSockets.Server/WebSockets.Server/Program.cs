@@ -11,7 +11,7 @@ namespace WebSockets.Server
     {
         static void Main(string[] args)
         {
-            // 클라이언트를 리스트에 저장.
+            // 클라이언트를 리스트에 저장, 연결.
             var clients = new List<IWebSocketConnection>();
 
             // 서버 연결설정 초기화
@@ -21,43 +21,43 @@ namespace WebSockets.Server
             {
                 socket.OnOpen = () =>
                 {
-                    // Add the incoming connection to our list.
+                    // 리스트에 연결 추가
                     clients.Add(socket);
 
-                    // Inform the others that someone has just joined the conversation.
+                    // 다른 클라이언트에 신규 참여 통지
                     foreach (var client in clients)
                     {
-                        // Check the connection unique ID and display a different welcome message!
+                        // 고유 ID 표기
                         if (client.ConnectionInfo.Id != socket.ConnectionInfo.Id)
                         {
-                            client.Send("<i>" + socket.ConnectionInfo.Id + " joined the conversation.</i>");
+                            client.Send("<i>" + socket.ConnectionInfo.Id + " 접속</i>");
                         }
                         else
                         {
-                            client.Send("<i>You have just joined the conversation.</i>");
+                            client.Send("<i>접속 되었습니다.</i>");
                         }
                     }
                 };
 
                 socket.OnClose = () =>
                 {
-                    // Remove the disconnected client from the list.
+                    // 클라이언트 삭제
                     clients.Remove(socket);
 
-                    // Inform the others that someone left the conversation.
+                    // ID를 가진 사용자가 나갔음
                     foreach (var client in clients)
                     {
                         if (client.ConnectionInfo.Id != socket.ConnectionInfo.Id)
                         {
-                            client.Send("<i>" + socket.ConnectionInfo.Id + " left the chat room.</i>");
+                            client.Send("<i>" + socket.ConnectionInfo.Id + " 가 접속을 끊었습니다.</i>");
                         }
                     }
                 };
 
                 socket.OnMessage = message =>
                 {
-                    // Send the message to everyone!
-                    // Also, send the client connection’s unique identifier in order to recognize who is who.
+                    // 커맨드 서버로 전송, ID 포함
+                    
                     foreach (var client in clients)
                     {
                         client.Send(socket.ConnectionInfo.Id + " says: <strong>" + message + "</strong>");
@@ -65,7 +65,7 @@ namespace WebSockets.Server
                 };
             });
 
-            // Wait for a key press to close...
+            // 종료 대기
             Console.ReadLine();
         }
     }
