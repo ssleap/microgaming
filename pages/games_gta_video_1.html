@@ -54,7 +54,7 @@
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/02.png');">
   <section id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <h6 class="heading">Games</h6>
@@ -109,33 +109,18 @@
     <!-- ################################################################################################ -->
     <div class="content three_quarter"> 
       <!-- ################################################################################################ -->
-      <h1>Games | Guide</h1>
-      <p> Guide message</p>
+      <h1>Games | GTA | Watch VideoClip | Video</h1>
+
+
       <body>
-      <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-      <video id="video" width="640" height="480" controls></video>
-      <script>
-      if(Hls.isSupported())
-      {
-          var video = document.getElementById('video');
-          var hls = new Hls();
-          hls.loadSource('https://acee2b4c336e2e6f.mediapackage.ap-northeast-2.amazonaws.com/out/v1/9a998cbe671f40eca5afe7246f1f9db8/index.m3u8');
-          hls.attachMedia(video);
-          hls.on(Hls.Events.MANIFEST_PARSED,function()
-          {
-              video.play();
-          });
-      }
-      else if (video.canPlayType('application/vnd.apple.mpegurl'))
-      {
-          video.src = 'https://acee2b4c336e2e6f.mediapackage.ap-northeast-2.amazonaws.com/out/v1/9a998cbe671f40eca5afe7246f1f9db8/index.m3u8';
-          video.addEventListener('canplay',function()
-          {
-              video.play();
-          });
-      }
-      </script>
+      <video width="640" height="480" controls>
+      <source src="http://d1rtkco4ytqwj2.cloudfront.net/gta1.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      </video>
       </body>
+
+
+
         <!--#######################################댓글기능##############################################-->
         <div id="disqus_thread"></div>
 <script>
@@ -158,13 +143,10 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script id="dsq-count-scr" src="//cloud-nine-1.disqus.com/count.js" async></script>
-    <!--#######################################댓글기능 끝##############################################-->               
-        
-    </body>
-     
-      <!-- ################################################################################################ -->
-      
-    </div>
+    <!--#######################################댓글기능 끝##############################################-->  
+
+
+
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>
