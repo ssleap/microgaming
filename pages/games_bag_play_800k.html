@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>T9SS | Games</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="socket.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body id="top">
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="../index.html">Team 9 Streaming Service</a></h1>
+    </div>
+    <div id="quickinfo" class="fl_right">
+      <ul class="nospace inline">
+        <li><strong>서울시립대</strong><br>
+          컴퓨터과학종합설계</li>
+        <li><strong>9조</strong><br>
+          게임 스트리밍 서비스</li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li class="active"><a href="../index.html">Home</a></li>
+      <li><a class="drop" href="games_guide.html">Games</a>
+        <ul>
+          <li><a href="games_guide.html">Guide</a></li>
+          <li><a href="games_bag_video.html">Battle Ground</a></li>
+          <li><a href="games_gta_video.html">GTABattle Ground</a></li>
+          <li><a href="games_guide.html">etc</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <section id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Games</h6>
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Games</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="sidebar one_quarter first"> 
+      <!-- ################################################################################################ -->
+      <h6>Games</h6>
+      <nav class="sdb_holder">
+        <ul>
+          <li><a href="games_guide.html">Guide</a></li>
+          <li><a href="games_bag_video.html">Battle Ground</a>
+            <ul>
+              <li><a href="games_bag_video.html">Watch VideoClip</a></li>
+              <li><a href="games_bag_play.html">Play game</a></li>
+            </ul>
+          </li>
+          <li><a href="games_gta_video.html">GTA</a>
+            <ul>
+              <li><a href="games_gta_video.html">Watch VideoClip</a></li>
+              <li><a href="games_gta_play.html">Play game</a> </li>
+            </ul>
+          </li>
+          <li><a href="#">etc</a></li>
+        </ul>
+      </nav>
+ <!--     
+      <div class="sdb_holder">
+ 
+        <article>
+          <h6>Play your world!</h6>
+          <p>WOOOOW</p>
+        </article>
+      </div>
+ -->
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter"> 
+      <!-- ################################################################################################ -->
+      <h1>Games | BattleGround | Play game</h1>
+      <p> 현재 800K 화질 </p>
+
+      <body>
+      <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      <video id="video" width="640" height="480" controls></video>
+      <script>
+      if(Hls.isSupported())
+      {
+          var video = document.getElementById('video');
+          var hls = new Hls();
+          hls.loadSource('https://0ef8937af0317fea.mediapackage.ap-northeast-2.amazonaws.com/out/v1/3e2a52f4be5f408c968be738a9804007/index.m3u8');
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED,function()
+          {
+              video.play();
+          });
+      }
+      else if (video.canPlayType('application/vnd.apple.mpegurl'))
+      {
+          video.src = 'https://0ef8937af0317fea.mediapackage.ap-northeast-2.amazonaws.com/out/v1/3e2a52f4be5f408c968be738a9804007/index.m3u8';
+          video.addEventListener('canplay',function()
+          {
+              video.play();
+          });
+      }
+      </script>
+      </body>
+
+        <!--#######################################댓글기능##############################################-->
+        <div id="disqus_thread"></div>
+<script>
+    
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cloud-nine-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//cloud-nine-1.disqus.com/count.js" async></script>
+    <!--#######################################댓글기능 끝##############################################-->  
+
+
+
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4 bgded overlay" style="background-image:url('../images/demo/backgrounds/04.png');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="heading">컴퓨터과학종합설계</h6>
+      <p>서울시립대 캡스톤 9조 작품입니다.</p>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">만드느라 수고하셨습니다</h6>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">서울시립대 컴퓨터과학부</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
